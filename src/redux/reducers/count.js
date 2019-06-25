@@ -3,7 +3,7 @@ import { COUNTDESC } from "../actions";
 
 
 export default (state=1901,action)=>{
-    console.log(action);
+
     switch(action.type){
 
         case "COUNTADD":

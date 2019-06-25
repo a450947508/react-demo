@@ -52,6 +52,7 @@
     "redux": "^4.0.1",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
+    "swiper": "^4.5.0",
     "url-loader": "^2.0.0",
     "utf-8": "^2.0.0"
   }

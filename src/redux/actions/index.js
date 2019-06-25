@@ -71,3 +71,17 @@ export const clickshuju=()=>{
     })   
    
 }
+
+
+export const GEISHOUYELIST="GEISHOUYELIST"
+
+export const getshouyelist=()=>{
+    return axios.get("/react/shouyelist")
+    .then(res=>{
+        return{
+            type:GEISHOUYELIST,
+            list:res.data.result,
+        }
+        // console.log(res.data.result)
+    })
+}

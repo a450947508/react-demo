@@ -20,9 +20,6 @@ import {IndexView} from './views/index'
 
 
 class App extends React.Component {
-
- 
-
     render() {
         return (
             <div>          
