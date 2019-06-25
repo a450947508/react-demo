@@ -1,0 +1,53 @@
+.am-list-item .am-input-label.am-input-label-5 {
+  width: 0.4rem;
+}
+
+.am-list-body {
+  background: none;
+}
+.am-list-item {
+  background: none;
+}
+.touxiang {
+  height: 3.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+.touxiang img {
+  width: 50%;
+  height: 70%;
+  margin-top: 0.5rem;
+  margin-left: 1.7rem;
+  border-radius: 50%;
+}
+
+.loginbottom {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  color: #000;
+  .loginbottom-top {
+    .line {
+      width: 33%;
+      border-bottom: 2px solid #e1e1e1;
+      float: left;
+      margin: 0.18rem 0.2rem;
+    }
+    .party {
+      font-size: 0.24rem;
+      float: left;
+      color: #aaa;
+    }
+  }
+
+  .loginli {
+    margin-top: 0.4rem;
+    float: left;
+    width: 30%;
+    text-align: center;
+    img {
+     display: inline-block;
+    }
+  }
+}
