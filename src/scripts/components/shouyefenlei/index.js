@@ -37,7 +37,7 @@ export class Shouyefenlei extends Component {
         } = store.getState()
       
         return (
-            <div>
+            <div className='shouyefenlei'>
                 <ul className="homeul">
                     {
                         list.map((item, i) => {
@@ -66,11 +66,9 @@ export class Shouyefenlei extends Component {
                     <Swipe data={swipe2}/>
                     <h2>菜谱推荐 <span >更多<i className={"iconfont  icon  iconyoujiantou"}></i></span>
                     </h2>
-
                     <Shouyelist/>
-
-
                 </div>
+               
             </div>
         )
     }

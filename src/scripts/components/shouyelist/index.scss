@@ -1,0 +1,22 @@
+
+
+
+.shouyelistUl{
+    width: 100%;
+    overflow: hidden;
+    li{
+        width: 47%;
+        float: left;
+        margin: 20px 1%;
+        img{
+            width: 100%;
+            border-radius: 15%;
+        }
+        p{
+            text-indent: 1em;
+        }
+        .zoomIn{
+            animation: zoomIn 1s;
+        }
+    }
+}

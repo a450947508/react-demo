@@ -3,8 +3,8 @@
 
 
 import { Footer } from "../../components/footer";
-
-
+import {Classifycontent} from '@/scripts/components/classify'
+import {Search} from "@/scripts/components/search"
 
 
 
@@ -12,7 +12,8 @@ export class Classify extends Component{
     render(){
         return(
             <div>
-                <p> 分页  classify</p>
+               <Search/>
+                <Classifycontent/>
                 <Footer/>
             </div>
         )

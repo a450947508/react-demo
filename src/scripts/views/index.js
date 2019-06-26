@@ -7,6 +7,7 @@ import { MyApp } from './app'
 import { ReduxDemo } from './store/index'
 import { PropTypes } from "prop-types";
 import { Login } from '@/scripts/components/login'
+import { Xiangqingye } from '@/scripts/components/xiangqingye'
 
 export class IndexView extends Component {
     render() {
@@ -42,7 +43,7 @@ export class Layout extends Component {
 
                     <Route path="/myapp" strtic component={MyApp} />
                     <Route path="/redux" exact component={ReduxDemo} />
-
+                    <Route path="/xiangqingye" exact component={Xiangqingye} />
                     
                     <Route render={() => (<Redirect to="/myapp/home" />)} />
                 </Switch>
