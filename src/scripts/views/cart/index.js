@@ -3,13 +3,14 @@
 
 
 import { Footer } from "../../components/footer";
+import { Col } from "../../components/col";
 
 
 export class Cart extends Component{
     render(){
         return(
             <div>
-                <p> 购物车  cart</p>
+                <Col/>
                 <Footer/>
             </div>
         )

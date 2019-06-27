@@ -16,6 +16,7 @@ export class Classifycontent extends Component {
         goods: []
     }
 
+
     componentWillMount() {
         axios.get("react/fenleilisttype")
             .then(res => {
@@ -36,13 +37,12 @@ export class Classifycontent extends Component {
 
 
     renderContent = newTabs =>
-
         <ul style={{ paddingBottom: "2rem", backgroundColor: '#fff' }}>
             {
                 this.state.goods.filter((g) => g.type == newTabs.title).map((item, i) => {
                     return (
-                        // <Link to="/xiangqingye" >
-                            <li className="li cl" key={i}   >
+                        <Link className='fenlei' to={"/xiangqingye/detil/" + "?id=" + item._id} key={i} >
+                            <li className="li cl"    >
                                 <img className="zoomIn" src={item.img1} alt="" />
                                 <div className="div">
                                     <h2 className="cl">{item.title}</h2>
@@ -54,7 +54,7 @@ export class Classifycontent extends Component {
                                     </p>
                                 </div>
                             </li>
-                        // </Link>
+                        </Link>
                     )
                 })
             }
@@ -63,11 +63,18 @@ export class Classifycontent extends Component {
 
     render() {
 
+        // const {
+        //     list: [],
+        //     goods: []
+        // } = this.props
+
+
         const {
             list,
             goods
         } = this.state
 
+        console.log(this.state.goods)
 
         // let tabs = list.map((item) => {
         //     item.title = item;

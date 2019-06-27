@@ -8,6 +8,7 @@ import { ReduxDemo } from './store/index'
 import { PropTypes } from "prop-types";
 import { Login } from '@/scripts/components/login'
 import { Xiangqingye } from '@/scripts/components/xiangqingye'
+import { Search } from '@/scripts/components/search'
 
 export class IndexView extends Component {
     render() {
@@ -23,28 +24,20 @@ export class IndexView extends Component {
     }
 }
 
-
-
-
 // 路由配置  
 export class Layout extends Component {
-    getChildContext(){
-        
+    getChildContext(){     
         return {
             props:this.props
         }
     }
-
     render() {
-        return (
-          
-
+        return (  
                 <Switch>
-
                     <Route path="/myapp" strtic component={MyApp} />
                     <Route path="/redux" exact component={ReduxDemo} />
-                    <Route path="/xiangqingye" exact component={Xiangqingye} />
-                    
+                    <Route path="/xiangqingye/:id" exact  component={Xiangqingye} />
+                    <Route path="/search"   component={Search} />
                     <Route render={() => (<Redirect to="/myapp/home" />)} />
                 </Switch>
            

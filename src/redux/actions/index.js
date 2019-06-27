@@ -62,9 +62,7 @@ export const clickshuju=()=>{
     .then(res=>{
        return {
         type:"clickshuju",
-        mv:res.data.result,
-        
-        
+        mv:res.data.result,         
        }
        console.log(res.data.result)
        console.log("666")
@@ -82,6 +80,6 @@ export const getshouyelist=()=>{
             type:GEISHOUYELIST,
             list:res.data.result,
         }
-        // console.log(res.data.result)
+        
     })
 }

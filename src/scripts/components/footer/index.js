@@ -6,7 +6,7 @@ import  './index.scss'
 export const foots = [
     { txt: "首页", path: "/myapp/home", name: "home", icon: "icon-home" },
     { txt: "分类", path: "/myapp/classify", name: "classify", icon: "icon-goodsfill" },
-    { txt: "分享", path: "/myapp/cart", name: "cart", icon: "icon-shop_car" },
+    { txt: "收藏", path: "/myapp/cart", name: "cart", icon: "iconshoucangchangtai" },
     { txt: "我", path: "/myapp/my", name: "my", icon: "icon-minefill" }
 ]
 

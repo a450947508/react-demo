@@ -206,5 +206,4 @@ export class Login extends Component {
 Login.contextTypes = {
     props: PropTypes.object
 
-
 }
