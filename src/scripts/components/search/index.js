@@ -17,7 +17,7 @@ export class Search extends Component {
         history.go(-1)
     }
     getlist = () => {
-        console.log(this.refs.one.state.value)
+     
         axios.get("react/getlist", {
             params: {
                 keyword: this.refs.one.state.value
@@ -26,12 +26,70 @@ export class Search extends Component {
             this.setState({
                 lists: res.data.result
             })
-            console.log(res.data.result)
+           
         })
         this.refs.one.state.value = ""
     }
 
+    getlist1=()=>{
+      
+        axios.get("react/getlist", {
+            params: {
+                keyword: this.refs.two.innerHTML
+            }
+        }).then(res => {
+            this.setState({
+                lists: res.data.result
+            })
+            
+        })
+       
+    }
 
+    getlist2=()=>{
+      
+        axios.get("react/getlist", {
+            params: {
+                keyword: this.refs.three.innerHTML
+            }
+        }).then(res => {
+            this.setState({
+                lists: res.data.result
+            })
+            
+        })
+       
+    }
+
+    getlist3=()=>{
+       
+        axios.get("react/getlist", {
+            params: {
+                keyword: this.refs.four.innerHTML
+            }
+        }).then(res => {
+            this.setState({
+                lists: res.data.result
+            })
+            
+        })
+       
+    }
+
+    getlist4=()=>{
+       
+        axios.get("react/getlist", {
+            params: {
+                keyword: this.refs.five.innerHTML
+            }
+        }).then(res => {
+            this.setState({
+                lists: res.data.result
+            })
+            
+        })
+       
+    }
 
 
 
@@ -51,6 +109,12 @@ export class Search extends Component {
                     showCancelButton
                     ref="one"
                 />
+                <div className="tishi">
+                    <span className="tishispan" ref="two" onClick={this.getlist1} data="沙拉">沙拉</span>
+                     <span  className="tishispan" ref="three" onClick={this.getlist2}>蒲公英</span>
+                     <span  className="tishispan" ref="four" onClick={this.getlist3}>饭</span>
+                     <span  className="tishispan" ref="five" onClick={this.getlist4}>奶油</span>
+                </div>
                 <ul style={{ marginTop:50}}>
                     {
                         lists.map((item, i) => {

@@ -1,7 +1,7 @@
 
 import store from '../../../redux/store'
 import axios from "@/utils/axios"
-
+import { Link } from "react-router-dom"
 import { getshouyelist, } from '@/redux/actions'
 
 import './index.scss'
@@ -33,7 +33,7 @@ export class Shouyelist extends Component {
         const {
             shouyelist
         } = store.getState()
-      
+        console.log(shouyelist)
 
 
         return (
@@ -42,11 +42,16 @@ export class Shouyelist extends Component {
                     {
                         shouyelist.list.map((l, i) => {
                             return (
-                                <li  key={i}>
-                                    <img className='zoomIn' src={l.img} alt="" />
-                                    <h2>{l.title}</h2>
-                                    <p>{l.author}</p>
+
+                                <Link className='fenlei  jello' to={"/xiangqingye/detil/" + "?id=" + l._id}  key={i}>
+
+
+                                <li  >
+                                    <img className='zoomIn' src={l.img1} alt="" />
+                                    <h2 className='sl'>{l.title}</h2>
+                                    <p>{l.love}人收藏</p>
                                 </li>
+                                </Link>
                             )
                         })
                     }

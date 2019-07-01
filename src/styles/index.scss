@@ -13,7 +13,7 @@ $base_color:#333;
 // 全局样式  golbal 
 html,body,#app,.box{
     width:100vw;
-    height:100vh;
+    height:90vh;
     touch-action: pan-y;
 }
 
@@ -22,3 +22,11 @@ html,body,#app,.box{
     background-color: yellow;
     border: solid 1px red;
 }
+
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

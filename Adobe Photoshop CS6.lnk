@@ -32,6 +32,7 @@ module.exports = {
         alias:{   // 别名    @ ==> src 
             "@":path.resolve("src"), 
             "~":path.resolve("src/scripts")
+
         }
     },
 
@@ -113,20 +114,19 @@ module.exports = {
     devServer:{   // 配置 服务器 webpack-dev-server 开发使用 
         contentBase:path.join(__dirname,"dist"),  // 服务器 作用于 dist 
         host:"0.0.0.0",
-        port:2000,
+        port:8000,
         compress:true,
         hot:true,
         inline:true,
         // open:true,
         publicPath:"",
-        proxy:{  // 反向代理 
+        proxy:{   // 代理
             "/vue": {
                 target:"http://localhost:1901/",
                 changeOrigin: true,
             },
             "/react": {
                 target:"http://localhost:1901/",
-                // target:"http://47.102.118.106:2000/",
                 changeOrigin: true,
             }
         }
@@ -146,7 +146,7 @@ module.exports = {
             disable:false  // 才样式抽离  
         }),
 
-        // 自动引入  全局引入 
+        // 自动引入 
         new webpack.ProvidePlugin({
             React:"React",
             Component:['react','Component']

@@ -18,7 +18,7 @@ export class Classifycontent extends Component {
 
 
     componentWillMount() {
-        axios.get("react/fenleilisttype")
+        axios.get("/react/fenleilisttype")
             .then(res => {
                 this.setState({
                     list: res.data.result
@@ -26,7 +26,7 @@ export class Classifycontent extends Component {
 
             })
 
-        axios.get("react/fenleilist")
+        axios.get("/react/fenleilist")
             .then(res => {
                 this.setState({
                     goods: res.data.result
@@ -42,7 +42,7 @@ export class Classifycontent extends Component {
                 this.state.goods.filter((g) => g.type == newTabs.title).map((item, i) => {
                     return (
                         <Link className='fenlei' to={"/xiangqingye/detil/" + "?id=" + item._id} key={i} >
-                            <li className="li cl"    >
+                            <li className="xiangqingtu"    >
                                 <img className="zoomIn" src={item.img1} alt="" />
                                 <div className="div">
                                     <h2 className="cl">{item.title}</h2>

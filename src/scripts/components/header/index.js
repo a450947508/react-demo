@@ -27,7 +27,7 @@ export class Header extends Component{
                 <NavBar
                     mode="dark"
                     leftContent={<Icon type="left"  onClick={this.goback} />}  
-                    style={{backgroundColor:"#091454"}}
+                    style={{backgroundColor:"#fff",color:"#000"}}
                     rightContent={[
                         <Icon key="0" type="search" style={{ marginRight: '16px' }}  onClick={this.gotosearch}
                         

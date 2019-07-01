@@ -51,6 +51,14 @@ export const changeinput=(val)=>{
 }
 
 
+export const SETITEM="SETITEM"
+export const  setItem=(item)=>{
+    return {
+        type :SETITEM,
+        item
+    }
+}
+
 
 
 
@@ -83,3 +91,5 @@ export const getshouyelist=()=>{
         
     })
 }
+
+

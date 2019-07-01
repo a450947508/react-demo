@@ -8,6 +8,7 @@ import qqq from "./mv";
 import swipe1 from "./swipe1";
 import swipe2 from "./swipe2";
 import shouyelist from "./shouyelist";
+import item from "./setitem";
 
 
 
@@ -18,7 +19,8 @@ export  const reducers = combineReducers({
     qqq,
     swipe1,
     swipe2,
-    shouyelist
+    shouyelist,
+    item
 
   })
   

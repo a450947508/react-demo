@@ -1,6 +1,8 @@
 
 import axios from "axios";
 
+// axios.defaults.baseURL = "http://47.102.118.106:1901/";  // 基本路径 
+
 // 前端 数据请求  配置 header  添加 token  
 import history from "./history"
 
